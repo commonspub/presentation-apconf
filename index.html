@@ -60,7 +60,7 @@
 					<p>2018 - start of CommonsPub project
 						<span>lots of research, and prototyping with a fork of pleroma</span></p>
 					<p>2019 - development as part of MoodleNet
-						<span>implemented groups, link sharing, file sharing, etc</span>
+						<span>implemented groups, link sharing, file sharing, collaborative lists, etc</span>
 					</p>
 				</div>
 
@@ -92,132 +92,106 @@
 			</section>
 
 			<section data-markdown>
-				ActivityPub and the fediverse today are great for data-level interoperability, between different apps on
-				different servers
+ActivityPub and the fediverse today are great for data-level interoperability, between different apps on different servers
 
-				CommonsPub wants software-level interoperability as well, with different apps sharing large parts of
-				their code
+CommonsPub wants software-level interoperability as well, with different apps sharing large parts of their code
 			</section>
 			<section data-markdown>
-
-				Instead of a top-down “product design” approach to building an app or platform, we’d like a world where
-				even non-technical users and communities can do it themselves
+Instead of a top-down “product design” approach to building an app or platform, we’d like a world where even non-technical users and communities can do it themselves
 			</section>
 			<section data-markdown>
-				You should able to piece together custom experiences from an ecosystem of apps and plugins developed by
-				different groups who all contribute to (and benefit from) a pool of interdependent software libraries,
-				while each focusing on different use cases, features and user experiences.
+You should able to piece together custom experiences from an ecosystem of apps and plugins developed by different groups who all contribute to (and benefit from) a pool of interdependent software libraries, while each focusing on different use cases, features and user experiences.
 
 			</section>
 			<section data-markdown>
-
-				We have implemented groups (to further decentralise the fediverse by rendering users and communities
-				independent from the instance they’re on),
+We have implemented groups (to further decentralise the fediverse by rendering users and communities independent from the instance they’re on),
 
 			</section>
 
 			<section data-markdown>
-				Well we're really trying to be *incredibly* reusable. We want people to be able to reuse our models and
-				add their own fields after the fact etc., none of which are supported by our database library.
+Well we're really trying to be *incredibly* reusable. We want people to be able to reuse our models and add their own fields after the fact etc., none of which are supported by our database library.
 			</section>
 			<section data-markdown>
-				We're trying to build an ecosystem where you can build apps easily - just pull in a few libraries, add
-				some configuration, copy and tweak some queries and boom - done. that is a kind of magic, i suppose, so
-				of course it takes magic.
+We're trying to build an ecosystem where you can build apps easily - just pull in a few libraries, add some configuration, copy and tweak some queries and boom - done. that is a kind of magic, i suppose, so of course it takes magic.
 			</section>
 
 			<section data-markdown>
-				but what none of this really tells you is how much fun it is to build! when you suddenly have extreme
-				freedom to go
-				from thought to execution (that execution time doesn't lag behind thought time too much), you just find
-				yourself
-				building cool things instead of puzzling them out!
+but what none of this really tells you is how much fun it is to build! when you suddenly have extreme freedom to go from thought to execution (that execution time doesn't lag behind thought time too much), you just find yourself building cool things instead of puzzling them out!
 			</section>
 			<section data-markdown>
-				it's like a framework, except it's just a bunch of libraries and that build upon existing frameworks and
-				libraries
-				(like Phoenix for web and Ector for database), as well as sample apps which you can
-				use/modify/extend/fork...
+it's like a framework, except it's just a bunch of libraries and that build upon existing frameworks and librarie (like Phoenix for web and Ector for database), as well as sample apps which you can use/modify/extend/fork...
 			</section>
 			<section data-markdown>
-				* an ActivityPub library that is de-coupled from the rest of the app
-				* a universal database identifier keying scheme
-				* config-driven database schemas + validation
-				* a lot of convenience apis around the database
+* an ActivityPub library that is de-coupled from the rest of the app
+* a universal database identifier keying scheme
+* config-driven database schemas + validation
+* a lot of convenience apis around the database
 			</section>
 			<section data-markdown>
-				We have decoupled the federation and storage of ActivityStreams activities/objects from the app’s
-				relational
-				database, backend logic, APIs and frontend interfaces.
+We have decoupled the federation and storage of ActivityStreams activities/objects from the app’s relational database, backend logic, APIs and frontend interfaces.
 
 			</section>
 			<section data-markdown>
-				package up models that we can share with other applications that have a slightly different view of the
-				world.
+package up models that we can share with other applications that have a slightly different view of the world.
 			</section>
 
 			<section data-markdown>
-				Users can have one fediverse identity and a timeline which shows all types of content and activities in
-				one place, while participating in multiple communities and using specialised apps for different
-				activities.
+Users can have one fediverse identity and a timeline which shows all types of content and activities in one place, while participating in multiple communities and using specialised apps for different activities.
 			</section>
 			<section data-markdown>
-
-				Federated taxonomies for opt-in search indexing, and topic-based discovery across instances.
+Federated taxonomies for opt-in search indexing, and topic-based discovery across instances.
 			</section>
 			<section data-markdown>
-				### what’s available to be hacked on and deployed
+### what’s available to be hacked on and deployed
 
 			</section>
 			<section data-markdown>
-				## CommonsPub apps in development:
+## CommonsPub apps in development:
 
-				- VoxPub as a simple [micro]blogging app
-				- ValueFlows to facilitate and federate mutual aid and circular economies.
-				- HAHA Academy to share educational knowledge and encourage lifelong learning.
+- VoxPub as a simple [micro]blogging app
+- ValueFlows to facilitate and federate mutual aid and circular economies.
+- HAHA Academy to share educational knowledge and encourage lifelong learning.
 			</section>
 
 			<section data-markdown>
-				## And one more thing...
+## And one more thing...
 
 
 			</section>
 
 			<section data-markdown>
-				# Bonfire
+# Bonfire
 			</section>
 
 			<section data-markdown>
-				#### 1. Bonfire is a device
-				#### 2. Bonfire is a fediverse hosting service
-				#### 3. Bonfire is a CommonsPub app
-
+#### 1. Bonfire is a device
+#### 2. Bonfire is a fediverse hosting service
+#### 3. Bonfire is a CommonsPub app
 			</section>
 			<section data-markdown>
-
-				### 1. Bonfire is a device
-				- use CommonsPub apps offline or with people on your local network (Temporary Autonomous Zones)
-				- ready to use (plug in and play)
-				- based on Rasperry Pi
-				- runs CommonsPub apps
-				- install and remove any CommonsPub apps/extensions easily, no coding required
-				- comes with all the building blocks for creating your own apps
+### 1. Bonfire is a device
+- use CommonsPub apps offline or with people on your local network (Temporary Autonomous Zones)
+- ready to use (plug in and play)
+- based on Rasperry Pi
+- runs CommonsPub apps
+- install and remove any CommonsPub apps/extensions easily, no coding required
+- comes with all the building blocks for creating your own apps
 			</section>
 
 			<section data-markdown>
-				### 2. Bonfire is a fediverse hosting service
-				- syncs between your Bonfire and the fediverse whenever your device is online
-				- link it to your own domain name (or use `your-instance.bonfire.cafe`)
-				- runs open source software, so you can self-host instead
-				- open to cooperating with others wanting to run compatible services
+### 2. Bonfire is a fediverse hosting service
+- syncs between your Bonfire and the fediverse whenever your device is online
+- link it to your own domain name (or use `your-instance.bonfire.cafe`)
+- runs open source software, so you can self-host instead
+- open to cooperating with others wanting to run compatible services
 			</section>
 
 			<section data-markdown>
-				### 3. Bonfire is a CommonsPub app
-				- shows all your fediverse feeds and notifications in a single place
-				- you can run it on the Bonfire device, or on your own computer or server
-				- install and remove any CommonsPub extensions easily, no coding required
-				- allows you to easily configure and customise everything
+### 3. Bonfire is a CommonsPub app
+- shows all your fediverse feeds and notifications in a single place
+- you can run it on the Bonfire device, or on your own computer or server
+- install and remove any CommonsPub extensions easily, no coding required
+- allows you to easily configure and customise everything
 			</section>
 		</div>
 	</div>
