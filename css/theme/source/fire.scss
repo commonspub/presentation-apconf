@@ -30,6 +30,9 @@ $backgroundColor: $coal;
 .slide-background-content {
     background-image: url("/fire.jpg");
 }
+.slides section {
+    padding-right: 550px;
+}
 
 // Main text
 $mainFont: Ubuntu,

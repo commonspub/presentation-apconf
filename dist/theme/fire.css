@@ -13,6 +13,9 @@
 .slide-background-content {
   background-image: url("/fire.jpg"); }
 
+.slides section {
+  padding-right: 550px; }
+
 .reveal h1,
 .reveal h2,
 .reveal h3,
