@@ -24,11 +24,10 @@ $flame: red;
 $coal: #222;
 $codeBackground: #23241f;
 $mainColor: yellow;
+$backgroundColor:#241A19;
 
-$backgroundColor: $coal;
-
-.slide-background-content {
-    background-image: url("../fire.jpg");
+.present .slide-background-content {
+    background-image: url("../../assets/fire.jpg");
 }
 
 .slides section {
