@@ -26,13 +26,7 @@ $codeBackground: #23241f;
 $mainColor: yellow;
 $backgroundColor:#241A19;
 
-.present .slide-background-content {
-    background-image: url("../../assets/fire.jpg");
-}
 
-.slides section {
-    padding-right: 550px;
-}
 
 // Main text
 $mainFont: Ubuntu,
@@ -42,15 +36,6 @@ $mainFont: Ubuntu,
 $headingFont: Ubuntu,
 'sans-serif';
 $headingTextShadow: 2px 2px 2px $coal;
-
-.reveal h1,
-.reveal h2,
-.reveal h3,
-.reveal h4,
-.reveal h5,
-.reveal h6 {
-    text-transform: capitalize !important;
-}
 
 // h1 shadow, borrowed humbly from 
 // (c) Default theme by Hakim El Hattab
@@ -90,7 +75,6 @@ $selectionColor: #fff;
 }
 
 section.has-light-background {
-
     p,
     h1,
     h2,
@@ -119,86 +103,4 @@ section.has-light-background {
     vertical-align: baseline;
 }
 
-section li {
-    padding-bottom: 1em;
-}
-
-.timeline {
-
-    //Colors
-    $black: #34435E;
-    $white: #ffffff;
-
-    min-width: 300px;
-    max-width: 80%;
-    margin: auto;
-
-    p {
-        font-size: 0.75em;
-        line-height: 1.75em;
-        border-top: 3px solid;
-        border-image: linear-gradient(to right, red 0%, yellow 100%);
-        border-image-slice: 1;
-        border-width: 3px;
-        margin: 0;
-        padding: 40px;
-        counter-increment: stage;
-        position: relative;
-        color: $black;
-
-        span {
-            display: block;
-            font-size: 0.6em;
-            line-height: 2em;
-        }
-
-        //numbers
-        &:before {
-            content: counter(stage);
-            position: absolute;
-            border-radius: 50%;
-            padding: 10px;
-            height: 1.25em;
-            width: 1.25em;
-            background-color: $black;
-            text-align: center;
-            line-height: 1.25em;
-            color: $white;
-            font-size: 1em;
-        }
-    }
-
-    //odd number borders
-    p:nth-child(even) {
-        border-right: 3px solid;
-        padding-left: 0;
-
-        &:before {
-            left: 100%;
-            margin-left: -20px;
-        }
-    }
-
-    //even number borders
-    p:nth-child(odd) {
-        border-left: 3px solid;
-        padding-right: 0;
-
-        &:before {
-            right: 100%;
-            margin-right: -20px;
-        }
-    }
-
-    //handle first and last
-    p:first-child {
-        border-top: 0;
-        border-top-right-radius: 0;
-        border-top-left-radius: 0;
-    }
-
-    p:last-child {
-        border-bottom-right-radius: 0;
-        border-bottom-left-radius: 0;
-    }
-}
+@import '_custom';
