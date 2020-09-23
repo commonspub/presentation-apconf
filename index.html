@@ -18,9 +18,13 @@
 <body>
 	<div class="reveal">
 		<div class="slides">
+
 			<section data-markdown>
 				## CommonsPub
 				the quest for a modular decentralised app ecosystem
+
+---
+				#### commonsPub.org
 			</section>
 			
 			<section data-markdown>
@@ -29,145 +33,73 @@
 				Donna Haraway
 			</section>
 
-			<section>
-				<h3 class="cpub">
-					We are building CommonsPub as a way to claim back our creativity and power to play with technology
-				</h3>
-			</section>
-			<section>
-				<h3 class="cpub">
-					...to shape the digital worlds we want to live in. 
-				</h3>
-			</section>
 		
 			<section data-markdown data-background-image="assets/decent.png" data-background-opacity="0.1">
 				## Why ActivityPub?
 
-				ActivityPub and the fediverse today are great for data-level interoperability, between different apps on different servers
-				
-				CommonsPub wants software-level interoperability as well, with different apps sharing large parts of their code
+				ActivityPub and the fediverse have brought answers to some important issues with social media platforms.
 			</section>
 			
 			<section data-markdown data-background-image="assets/roots.jpg" data-background-opacity="0.2">
-				Instead of a top-down “product design” approach to building an app or platform, we’d like a world where even non-technical users and communities can do it themselves
+				Instead of a top-down “product design” approach to building an app or platform, we want a diverse DIY ecosystem to meet the unique needs of different users and communities
 			</section>
+
 			<section data-markdown data-background-image="assets/firewood.jpg" data-background-opacity="0.2">
-				You should able to piece together custom experiences from an ecosystem of apps and plugins developed by different groups who all contribute to (and benefit from) a pool of interdependent software libraries, while each focusing on different use cases, features and user experiences.	
+				Every user, community, developer, designer, project, and app has things to contribute to the common pool of knowledge, tools. We're trying to build a toolkit that helps piece all of those together into custom experiences dependending on each's need.
 			</section>
 
 			<section data-markdown data-background-opacity="0.1">
-				## Where all these ideas come from?
+				## Where is this coming from?
+			</section>
+	<section data-markdown>
+		### ValueFlows 
+		#### open cooperative ecosystems
+
+		http://valueflo.ws
+	</section>
+
+			<section data-markdown >
+				## RIP MoodleNet
+
+				blog.moodle.net
 			</section>
 
-			<section 
-				data-background-image="assets/time.jpeg" data-background-opacity="0.2">
-				<div class="timeline">
-					<p>2017 - discussions of an "open app ecosystem"
-						<span>and "open cooperative ecosystem"</span></p>
-					<p>2018 - start of CommonsPub project
-						<span>lots of research, and prototyping with a fork of pleroma</span></p>
-					<p>2019 - development as part of MoodleNet
-						<span>implemented groups, link sharing, file sharing, collaborative lists, etc</span>
-					</p>
-				</div>
-
-			</section>
-
-			<section>
-				<div class="timeline">
-					<p style="counter-reset: stage 3">May 2020 - forked as independent project
-						<span>implemented taxonomies, offers/needs, geolocations, units and measurements, etc</span></p>
-					<p>July 2020 - new frontend using Phoenix LiveView
-						<span>implemented live discussion threads, timelines, etc</span>
-					</p>
-					<p>Aug 2020 - modularity and extensibility of data schemas and federation 
-				</div>
-
-			</section>
-
-			<section>
-				<div class="timeline">
-					<p style="counter-reset: stage 6">
-						Sept 2020 - developing VoxPub [micro]blogging app
-						<span>as well as ValueFlows and HAHA Academy apps</span>
-					</p>
-					<p>End of 2020 - Bonfire!</p>
-					<p>2021 - toolkit to build your own CommonsPub app</p>
-				</div>
-			</section>
-
-			<section>
-				<h3 class="cpub">...Doing this, it’s not merely a matter of building softwares, but we need to build an ecosystem</h3>
-			</section>
 			
+<section data-markdown>
+	### toolkit
+
+	- Elixir
+	- Postgres & JSON
+	- LiveView
+</section>
+
 			<section data-markdown>
-				### The CommonsPub ecosystem
+				### Tools we've built so far
+				* an ActivityPub library, de-coupled from the rest of the app
+				* a universal database identifier scheme
+				* config-driven database schemas 
+				* UI components
 			</section>
 
 			<section data-markdown>
-				## cPub::Lab
-				A space that contains all the libs, ui modules, config files and various experimentations that can be used to build apps
+				### Features we've built so far
+				* federated groups
+				* link & file sharing
+				* federated taxonomy + search indexing
+				* instant search
+				* collaborative lists
+				* and more, like geolocation tagging and realtime discussion
+			</section>
+			<section data-markdown>
+Demo
 			</section>
 
 			<section data-markdown>
-				### cPub::Lab
-				* an ActivityPub library that is de-coupled from the rest of the app
-				* a universal database identifier keying scheme
-				* config-driven database schemas + validation
-				* UI modules
-				* a lot of convenience apis around the database
-			</section>
+				### CommonsPub::Apps
 
-
-			<section data-markdown data-background-image="assets/untangled.jpg" data-background-opacity="0.3"
-				data-background-position="bottom">
-We have decoupled the federation and storage of ActivityStreams activities/objects from the app’s relational database, backend logic, APIs and frontend interfaces.
-			</section>
-			<section data-markdown>
-package up models that we can share with other applications that have a slightly different view of the world.
-			</section>
-			
-			<section data-markdown data-background-image="assets/campfire.jpg" data-background-opacity="0.4">
-				We have implemented groups (to further decentralise the fediverse by rendering users and communities independent from the instance they’re on),
-				
-							</section>
-							<section data-markdown data-background-image="assets/juggling.jpg" data-background-opacity="0.2">
-								Users can have one fediverse identity and a timeline which shows all types of content and activities in one place, while participating in multiple communities and using specialised apps for different activities.
-							</section>
-							<section data-markdown
-							data-background-image="assets/taxonomy.jpg" data-background-opacity="0.2">
-				Federated taxonomies for opt-in search indexing, and topic-based discovery across instances.
-						</section>
-							<section data-markdown data-background-image="assets/jetpack.jpg" data-background-opacity="0.3">
-				but what none of this really tells you is how much fun it is to build! when you suddenly have extreme freedom to go from thought to execution (that execution time doesn't lag behind thought time too much), you just find yourself building cool things instead of puzzling them out!
-							</section>
-							<section data-markdown>
-				it's like a framework, except it's just a bunch of libraries and that build upon existing frameworks and librarie (like Phoenix for web and Ector for database), as well as sample apps which you can use/modify/extend/fork...
-							</section>
-
-			<section data-markdown>
-				## cPub::Apps
-				All the apps built on top of CommonsPub
-			</section>
-
-			<section data-markdown>
-				### cPub::Apps
-				* VoxPub: a simple [micro]blogging app
-				* HAHA Academy: share educational knowledge and encourage lifelong learning.
-				* OpenTasks: Coordinate tasks and activities in federated networks
-			</section>
-
-			<section data-markdown>
-				## cPub::School
-				A space to learn and share knowledge and experiences about CommonsPub
-			</section>
-
-			<section data-markdown>
-				### cPub::School
-				* Documentation
-				* Tutorials
-				* Courses
-				* Classes
+				* **VoxPub**: a simple [micro]blogging app
+				* **HAHA Academy**: sharing educational knowledge and lifelong learning
+				* **Bread.pub**: offers & needs bulletin board and tasks/activities coordination for mutual aid and circular economies
 			</section>
 
 			<section data-markdown>## And one more thing...</section>
@@ -175,35 +107,48 @@ package up models that we can share with other applications that have a slightly
 			<section data-markdown># Bonfire</section>
 
 			<section data-markdown>
-#### 1. Bonfire is a device
-#### 2. Bonfire is a fediverse hosting service
-#### 3. Bonfire is a CommonsPub app
+### Bonfire will be...
+
+#### 1. a device
+#### 2. a fediverse hosting service
+#### 3. a CommonsPub app
 			</section>
+
 			<section data-markdown data-background-image="assets/device.jpg" data-background-opacity="0.2">
-### 1. Bonfire is a device
+### 1. Bonfire the device
+
 - use CommonsPub apps offline or with people on your local network (Temporary Autonomous Zones)
-- ready to use (plug in and play)
+- ready to use (plug and play)
 - based on Rasperry Pi
-- runs CommonsPub apps
-- install and remove any CommonsPub apps/extensions easily, no coding required
-- comes with all the building blocks for creating your own apps
 			</section>
 
 			<section data-markdown data-background-image="assets/servers.jpg" data-background-opacity="0.2">
-### 2. Bonfire is a fediverse hosting service
-- syncs between your Bonfire and the fediverse whenever your device is online
+### 2. Bonfire the fediverse hosting service
+
+- syncs between your Bonfire and the fediverse when is online
 - link it to your own domain name (or use `your-instance.bonfire.cafe`)
-- runs open source software, so you can self-host instead
-- open to cooperating with others wanting to run compatible services
+- runs open source software you can self-host, and others could run compatible services
 			</section>
 
 			<section data-markdown>
-### 3. Bonfire is a CommonsPub app
+### 3. Bonfire the CommonsPub app
+
 - shows all your fediverse feeds and notifications in a single place
-- you can run it on the Bonfire device, or on your own computer or server
-- install and remove any CommonsPub extensions easily, no coding required
-- allows you to easily configure and customise everything
+- end-to-end encryption (keys on the device)
+- run it on a Bonfire device, or on your own computer
 			</section>
+
+			<section data-markdown>
+Bonfire will build upon the CommonsPub ecosystem as an attempt to ensure sustainable FLOSS developement and
+maintainance. 
+
+Crowdfunding campaign to help make it happen.
+</section>
+
+<section data-markdown>
+**Stay tuned at [bonfire.cafe](http://bonfire.cafe)**
+			</section>
+
 		</div>
 	</div>
 
